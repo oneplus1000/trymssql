@@ -1,20 +1,8 @@
 package core
 
-import (
-	"database/sql"
-	"fmt"
-)
+import "fmt"
 
-func MsSqlOpen() (*sql.DB, error) {
-	db, err := sql.Open("mssql", "server=localhost;user id=sa;password=123456;database=godb")
-
-	if err != nil {
-		return nil, err
-	}
-	return db, nil
-}
-
-func ImportFromMsSql() error {
+func SelectFromMsSql() error {
 
 	db, err := MsSqlOpen()
 	if err != nil {

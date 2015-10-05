@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	err := core.ImportFromMsSql()
+	err := core.SelectFromMsSql()
 	if err != nil {
 		fmt.Printf("err:%s", err.Error())
 	}
